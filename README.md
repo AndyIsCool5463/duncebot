@@ -5,6 +5,4 @@ Duncebot is using [discord.js](https://discord.js.org/#/docs/main/stable/general
 ### Installation:
 Install [Node.js](http://node.js.org) *Needs Node v8 or higher*
 Open your command prompt and go into the repo dir
-Then do ```node.js
-nodemon bot.js
-```
+Then do **"nodemon bot.js"
