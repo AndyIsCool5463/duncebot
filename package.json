@@ -1,0 +1,38 @@
+{
+  "name": "devviebot",
+  "version": "2.0.0",
+  "description": "devviebot based on Duncebot!",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AndyIsCool5463",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "github:Automattic/node-canvas#92b192447e9b9ae98da0f801e4e34afdd1dc1ef8",
+    "canvas-constructor": "^1.1.2",
+    "discord.js": "^11.4.2",
+    "ffmpeg": "0.0.4",
+    "fs-extra": "^7.0.0",
+    "fs-nextra": "^0.3.7",
+    "graceful-fs": "^4.1.11",
+    "gulp-clean-fix": "^0.3.4",
+    "http": "0.0.0",
+    "image-downloader": "^3.4.1",
+    "jimp": "^0.4.0",
+    "jsdom": "^12.0.0",
+    "lodash": "^4.17.10",
+    "minimatch": "^3.0.4",
+    "mysql": "^2.16.0",
+    "node-opus": "^0.3.0",
+    "node-pre-gyp": "^0.11.0",
+    "opusscript": "0.0.6",
+    "random-hex": "^1.0.2",
+    "seedrandom": "^2.4.4",
+    "snekfetch": "^4.0.4",
+    "thunderapi": "^0.7.1",
+    "trianglify": "^1.2.0",
+    "uws": "^99.0.0",
+    "yargs": "^12.0.2"
+  }
+}
