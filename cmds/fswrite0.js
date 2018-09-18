@@ -54,7 +54,7 @@ var data = pngURI.substr(pngURI.indexOf('base64') + 7);
 var buffer = new Buffer(data, 'base64');
 
 // Save the buffer to a file
-fs.writeFileSync('C:/Users/WILLIAM/Desktop/Node.js Projects/Duncebot2/cmds/images/picture.png', buffer);
+fs.writeFileSync('./cmds/images/picture.png', buffer);
 //  let image = 'C:/Users/WILLIAM/Desktop/Node.js Projects/Duncebot2/cmds/images/beach2.png';
 // Let user choose their background as arg[0]
 
@@ -64,21 +64,21 @@ console.log(rng)
 var bg;
 var randomcolor;
 if(!args[0]) {
-  bg = 'C:/Users/WILLIAM/Desktop/Node.js Projects/Duncebot2/cmds/images/background_g.jpg';
+  bg = './cmds/images/background_g.jpg';
   randomcolor = '#e6e8ed'
 } else if(args[0] === "beach") {
-  bg = 'C:/Users/WILLIAM/Desktop/Node.js Projects/Duncebot2/cmds/images/beach2.jpg';
+  bg = './cmds/images/beach2.jpg';
   randomcolor = randomHex.generate();
 } else if(args[0] === "tri") {
-  bg = 'C:/Users/WILLIAM/Desktop/Node.js Projects/Duncebot2/cmds/images/picture.png';
+  bg = './cmds/images/picture.png';
   randomcolor = randomHex.generate();
 } else if(args[0] === "sigignore") {
-  bg = 'C:/Users/WILLIAM/Desktop/Node.js Projects/Duncebot2/cmds/images/background_g.jpg';
+  bg = './cmds/images/background_g.jpg';
   randomcolor = '#e6e8ed'
 }
 // File system Sorter
-const dirU = 'C:/Users/WILLIAM/Desktop/Node.js Projects/Duncebot2/userProf'// User Profile Dir
-const dirUser = `C:/Users/WILLIAM/Desktop/Node.js Projects/Duncebot2/userProf/${userID}` // User Profile "Profile" Folder(s)
+const dirU = '../userProf'// User Profile Dir
+const dirUser = `../userProf/${userID}` // User Profile "Profile" Folder(s)
 const desiredMode = 0o2775
 const options = {
 mode: 0o2775
@@ -100,7 +100,7 @@ console.log(err)
     // image combiner
     const optionsD = {
       url: msgA.displayAvatarURL,
-      dest: `C:/Users/WILLIAM/Desktop/Node.js Projects/Duncebot2/userProf/${userID}/avatar.png`                  // Save to /path/to/dest/image.jpg
+      dest: `../userProf/${userID}/avatar.png`                  // Save to /path/to/dest/image.jpg
     }
 
     download.image(optionsD)
@@ -117,11 +117,11 @@ let target = message.author
 con.query(`SELECT * FROM xp WHERE id = '${target.id}'`, (err, rows) => {
   if(err) throw err;
     xp = rows[0].xp
-    fs.writeFile(`C:/Users/WILLIAM/Desktop/Node.js Projects/Duncebot2/userProf/${userID}/xp.txt`, xp, function(err) {})
+    fs.writeFile(`./userProf/${userID}/xp.txt`, xp, function(err) {})
 })
 // Math
 var scoreNeeded = 1000;
-var data = fs.readFileSync(`C:/Users/WILLIAM/Desktop/Node.js Projects/Duncebot2/userProf/${userID}/xp.txt`);
+var data = fs.readFileSync(`./userProf/${userID}/xp.txt`);
 let readXP = data.toString();
 var score = readXP;
 // Rank Color System
@@ -166,7 +166,7 @@ console.log(mathoutput)
 
       async function createCanvas() {
           const image = await fsn.readFile(bg);
-          const image2 = await fsn.readFile(`C:/Users/WILLIAM/Desktop/Node.js Projects/Duncebot2/userProf/${userID}/avatar.png`)
+          const image2 = await fsn.readFile(`./userProf/${userID}/avatar.png`)
           let rank = "Rank: 24"
           return new Canvas(934, 282)
               .addImage(image, 0, 0, 934, 282)
