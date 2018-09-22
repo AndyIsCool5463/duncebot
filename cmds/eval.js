@@ -6,7 +6,7 @@ module.exports.run = async (Bot,message,args) => {
       return text;
 };
 if (message.content.startsWith(">" + "eval")) {
-if(message.author.id !== "0859738556d31d34de4c7cf532000218") return;
+if(message.author.id !== "201825529333153792") return;
 try {
   const code = args.join(" ");
   let evaled = eval(code);

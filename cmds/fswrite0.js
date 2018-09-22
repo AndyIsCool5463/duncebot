@@ -120,7 +120,7 @@ con.query(`SELECT * FROM xp WHERE id = '${target.id}'`, (err, rows) => {
     fs.writeFile(`./userProf/${userID}/xp.txt`, xp, function(err) {})
 })
 // Math
-var scoreNeeded = 1000;
+var scoreNeeded = 8000;
 var data = fs.readFileSync(`./userProf/${userID}/xp.txt`);
 let readXP = data.toString();
 var score = readXP;
@@ -141,7 +141,7 @@ if(readXP < 99 && readXP < 100) {
   rank = 20
 } else if(readXP > 600 && readXP < 699) {
   rank = 24
-} else if(readXP > 700 && readXP < 799) {
+} else if(readXP > 700 && readXP < 2000) {
   rank = 28
 }
 ranktext = `Rank: ${rank}`;
@@ -171,7 +171,6 @@ console.log(mathoutput)
           return new Canvas(934, 282)
               .addImage(image, 0, 0, 934, 282)
               .setColor(randomcolor) // randomcolor
-              .setTextFont('Arial') // font
               .setTextAlign('center') // centers shit
               .setTextSize('32') // sets font size
               .addText(imageCaption, 350, 143) //adds name
